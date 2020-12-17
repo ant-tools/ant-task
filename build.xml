@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="ant-task" default="all">
+	<include file="d://lib//tasks.xml" />
+	<property file="d://lib/libraries.properties" />
+
+	<property name="NAME" value="js-ant-task" />
+	<property name="VERSION" value="1.0.1" />
+	<property name="BUILD" value="../build" />
+
+	<property name="JAR" value="${BUILD}/${NAME}-${VERSION}.jar" />
+	<property name="API" value="${BUILD}/api-doc/${NAME}" />
+
+	<property name="SRC" value="src" />
+	<property name="BIN" value="bin" />
+	<property name="CSS-BIN" value="../css/bin" />
+	<property name="SCRIPT-BIN" value="../script/bin" />
+
+	<target name="all" depends="clean-all">
+		<antcall target="build-jar" />
+		<antcall target="generate-api-doc" />
+		<copy file="${JAR}" todir="D://lib/" />
+	</target>
+
+	<target name="build-jar">
+		<jar destfile="${JAR}">
+			<zipfileset dir="${BIN}" excludes="**/test/" />
+			<zipfileset dir="../commons/bin" excludes="**/test/" />
+		</jar>
+	</target>
+
+	<target name="generate-api-doc">
+		<javadoc destdir="${API}" private="yes" windowtitle="j(s)-ant" overview="overview.html">
+			<packageset dir="src" />
+
+			<classpath>
+				<pathelement path="${BIN}" />
+				<pathelement path="../build/script-pack-1.0.0.jar" />
+				<pathelement path="../build/script-doc-1.0.0.jar" />
+
+				<pathelement path="${LIB-JS-DOM-API}" />
+				<pathelement path="${LIB-SERVER-CLIENT}" />
+				<pathelement path="${LIB-ANT}" />
+				<pathelement path="${LIB-WOOD}" />
+			</classpath>
+
+			<link href="http://api.js-lib.com/jdk/" />
+			<link href="http://api.js-lib.com/ant/" />
+		</javadoc>
+	</target>
+
+	<target name="sync-api-doc" depends="generate-api-doc">
+		<js.Sync source="${API}" host="js-lib.com" target="api.js-lib.com/js-ant" />
+	</target>
+
+	<target name="clean-all">
+		<delete file="${JAR}" verbose="yes" failonerror="no" />
+		<delete includeemptydirs="true" verbose="yes" failonerror="no">
+			<fileset dir="${API}" />
+		</delete>
+	</target>
+</project>

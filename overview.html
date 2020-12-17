@@ -1,0 +1,33 @@
+<body>
+    <h3>j(s)-lib Tools - Extension Tasks for Apache Ant</h3>
+    <p>This project contains Ant tasks for building j(s)-lib libraries and application based on them.</p>
+
+    <h5>Tasks Usage</h5>
+    <p>
+        There are two basic methods to execute user defined tasks. Standard Ant task usage pattern to declare task definition using <code>taskdef</code> task, as in snippet below.
+    </p>
+    <pre>
+&lt;taskdef name="js.BuildResources" classname="js.tools.ant.task.BuildResources"&gt;
+	&lt;classpath&gt;
+		&lt;pathelement path="${LIB-JS-ANT-TASK}" /&gt;
+		&lt;pathelement path="${LIB-JS-CLIENT}" /&gt;
+		&lt;pathelement path="${LIB-JS-DOM}" /&gt;
+		&lt;pathelement path="${LIB-WOOD}" /&gt;
+		&lt;pathelement path="${LIB-RHINO}" /&gt;
+		&lt;pathelement path="${LIB-XERCESIMPL}" /&gt;
+	&lt;/classpath&gt;
+&lt;/taskdef&gt;
+. . .
+&lt;target name="build resources"&gt;
+	&lt;js.BuildResources dir="build/site" verbose="true" /&gt;
+&lt;/target&gt;
+</pre>
+    <p>
+        If using Eclipse IDE one can declare task in <em>Window/Preferences/Ant/Runtime/Tasks</em> and use it directly by name.
+    </p>
+    <pre>
+&lt;target name="build resources"&gt;
+	&lt;js.buildResources dir="build/site" verbose="yes" /&gt;
+&lt;/target&gt;
+</pre>
+</body>

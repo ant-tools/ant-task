@@ -1,0 +1,39 @@
+.paging {
+	display: block;
+	list-style: none;
+	height: 34px;
+	padding: 0px;
+}
+.paging li {
+	float: left;
+	width: 26px;
+	height: 14px;
+	margin: 4px 0px;
+	padding: 4px 0px;
+	cursor: pointer;
+	text-align: center;
+}
+.paging .previous-page {
+	background-image: URL(../images/prev-page.png);
+}
+.paging .next-page {
+	background-image: URL(../images/next-page.png);
+}
+.paging .previous-page, .paging .next-page {
+	width: 16px;
+	height: 16px;
+	border: none;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+.paging .previous-page.disabled, .paging .next-page.disabled {
+	cursor: default;
+}
+.paging .previous-page:active {
+	position: relative;
+	right: 2px;
+}
+.paging .next-page:active {
+	position: relative;
+	left: 2px;
+}

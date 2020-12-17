@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<string>
+	<scenario_dialog_caption></scenario_dialog_caption>
+	<scenario_name_legend></scenario_name_legend>
+	<scenario_name_label></scenario_name_label>
+	<scenario_description_legend></scenario_description_legend>
+	<scenario_description_label></scenario_description_label>
+	<scenario_picture_legend></scenario_picture_legend>
+	<scenario_picture_label></scenario_picture_label>
+</string>

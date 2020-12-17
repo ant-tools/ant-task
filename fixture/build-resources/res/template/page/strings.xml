@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<string>
+	<top_menu_logout></top_menu_logout>
+	<top_menu_login></top_menu_login>
+	<top_menu_register></top_menu_register>
+	<main_menu_home></main_menu_home>
+	<main_menu_videos></main_menu_videos>
+	<main_menu_mixes></main_menu_mixes>
+	<main_menu_news></main_menu_news>
+	<main_menu_profile></main_menu_profile>
+	<copyright></copyright>
+</string>

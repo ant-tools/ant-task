@@ -1,0 +1,14 @@
+.dialog {
+	position: relative;
+}
+.dialog .x-close {
+	position: absolute;
+	top: 4px;
+	right: 4px;
+	width: 20px;
+	height: 20px;
+	background-image: URL(../images/x-close.jpg);
+}
+.dialog .x-close:hover {
+	background-image: URL(../images/x-close-hover.jpg);
+}

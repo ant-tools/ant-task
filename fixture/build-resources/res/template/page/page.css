@@ -1,0 +1,104 @@
+body {
+ background-image: url(page-bg.jpg);
+ background-repeat: repeat;
+ overflow-y: scroll;
+ overflow-x: hidden;
+ font-family: "Tahoma,arial,sans-serif";
+ font-size: 12 px;
+ line-height: 1 .4em;
+ text-shadow: 1 px 1 px 0 px #272727;
+ width: 1000 px;
+ margin: 0 auto;
+}
+
+.page-page {
+ width: 1000px;
+ margin: 0px auto;
+}
+
+.page-top-menu {
+ margin: 10px 0px;
+}
+
+.page-top-menu li {
+ list-style: none;
+ float: right;
+ width: 80px;
+ height: 20px;
+ text-align: center;
+ font-weight: normal;
+ font-size: 13px;
+ margin-bottom: 10px;
+ cursor: pointer;
+}
+
+.page-top-menu .logout {
+ display: none;
+ border-bottom: solid 4px #9B9B9B;
+}
+
+.page-top-menu .login {
+ border-bottom: solid 4px #1096D5;
+}
+
+.page-top-menu .register {
+ border-bottom: solid 4px #00A700;
+}
+
+.loged-in .logout {
+ display: inherit;
+}
+
+.loged-in .login {
+ display: none;
+}
+
+.loged-in .register {
+ display: none;
+}
+
+.page-header {
+ clear: both;
+ height: 140px;
+ border: solid 2px #CCC;
+ -moz-border-radius: 6px;
+ border-radius: 6px;
+ background-image: url(header-bg.jpg);
+ background-repeat: no-repeat;
+}
+
+.page-menu {
+ margin-top: 20px;
+ height: 36px;
+ border: solid 1px #324F4E;
+ -moz-border-radius: 0px 0px 6px 6px;
+ border-radius: 0px 0px 6px 6px;
+ background-image: url(menu-bg.jpg);
+ background-repeat: repeat-x;
+ background-color: #333;
+}
+
+.page-menu li {
+ list-style: none;
+ float: left;
+ margin-left: 60px;
+ font-weight: normal;
+ font-size: 18px;
+ line-height: 36px;
+}
+
+.page-menu li:first-child {
+ margin-left: 20px;
+}
+
+.page-menu a {
+ 
+}
+
+.page-body {
+ margin-top: 20px;
+}
+
+.page-footer {
+ margin-top: 20px;
+}

@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<html><head><meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+<title>j(s)-app</title>
+<link href="styles/reset.css" rel="stylesheet" type="text/css" />
+<link href="styles/dialog.css" rel="stylesheet" type="text/css" />
+<link href="styles/scenario.css" rel="stylesheet" type="text/css" />
+<link href="styles/paging.css" rel="stylesheet" type="text/css" />
+<link href="styles/list-view.css" rel="stylesheet" type="text/css" />
+<link href="styles/dialog.css" rel="stylesheet" type="text/css" />
+<link href="styles/login.css" rel="stylesheet" type="text/css" />
+<link href="styles/paging.css" rel="stylesheet" type="text/css" />
+<link href="styles/video-player.css" rel="stylesheet" type="text/css" />
+<link href="styles/page.css" rel="stylesheet" type="text/css" />
+<link href="styles/video-player.css" rel="stylesheet" type="text/css" />
+<script src="scripts/lib/js-lib-1.0.0.js" type="text/javascript"></script>
+<script src="scripts/lib/paging/paging.js" type="text/javascript"></script>
+<script src="scripts/js/js/hood/TopMenu.js" type="text/javascript"></script>
+<script src="scripts/js/js/hood/MainMenu.js" type="text/javascript"></script>
+<script src="scripts/js/js/compo/Dialog.js" type="text/javascript"></script>
+<script src="scripts/lib/list-view/list-view.js" type="text/javascript"></script>
+<script src="scripts/js/hc/view/VideoPlayer.js" type="text/javascript"></script>
+</head><body id="login-dialog">
+	<ul class="page-top-menu" data-class="js.hood.TopMenu">
+		<li class="logout"><a href="logout"></a></li>
+		<li class="login"><a href="login"></a></li>
+		<li class="register"><a href="registration"></a></li>
+	</ul>
+	<div class="page-header">
+		<img src="images/header-bg.jpg" />
+	</div>
+	<ul class="page-menu" data-class="js.hood.MainMenu">
+		<li><a href="home"></a></li>
+		<li><a href="videos"></a></li>
+		<li><a href="mixes"></a></li>
+		<li><a href="news"></a></li>
+		<li class="auth"><a href="profile"></a></li>
+	</ul>
+	<div class="page-body" data-editable="page-body">
+	<h1></h1>
+	<div class="video-player" data-class="hc.view.VideoPlayer" data-ref="compo/video-player">
+	<h1></h1>
+</div>
+	<ul class="paging" data-class="js.compo.Paging" data-ref="lib/paging">
+	<li class="previous-page"><img src="images/prev-page.png" /></li>
+	<li class="underline">1</li>
+	<li class="underline">2</li>
+	<li class="underline">3</li>
+	<li class="underline active">4</li>
+	<li class="underline">5</li>
+	<li class="next-page"><img src="images/next-page.png" /></li>
+</ul>
+</div>
+	<br clear="all" />
+	<div class="page-footer"></div>
+	<div class="hidden">
+		<div class="dialog" data-class="js.compo.Dialog" data-ref="dialog/login" id="login-dialog">
+	<div class="x-close"></div>
+	<h2 data-editable="caption" data-superid="login-dialog"></h2>
+	<form>
+		<fieldset data-editable="fieldsets">
+	<legend></legend>
+	<label></label><input data-value="name" type="text" />
+	<div class="list-view" data-class="js.compo.ListView" data-ref="lib/list-view" id="login-dialog">
+	<h1></h1>
+	<ul>
+		<li></li>
+	</ul>
+	<br clear="all" />
+	<ul class="paging" data-class="js.compo.Paging" data-ref="lib/paging" id="login-dialog">
+	<li class="previous-page"><img src="images/prev-page.png" /></li>
+	<li class="underline">1</li>
+	<li class="underline">2</li>
+	<li class="underline">3</li>
+	<li class="underline active">4</li>
+	<li class="underline">5</li>
+	<li class="next-page"><img src="images/next-page.png" /></li>
+</ul>
+</div>
+</fieldset>
+		<button class="submit" type="button"></button>
+		<button class="cancel" type="button"></button>
+	</form>
+</div>
+		<div class="dialog" data-class="js.compo.Dialog" data-ref="dialog/scenario" id="login-dialog">
+	<div class="x-close"></div>
+	<h2 data-editable="caption" data-superid="scenario-dialog"></h2>
+	<form>
+		<fieldset data-editable="fieldsets">
+	<legend></legend>
+	<label></label><input data-value="name" type="text" />
+</fieldset><fieldset data-editable="fieldsets">
+	<legend></legend>
+	<label></label><input data-value="description" type="text" />
+</fieldset><fieldset data-editable="fieldsets">
+	<legend></legend>
+	<label></label><input data-value="picture" type="file" />
+</fieldset>
+		<button class="submit" type="button"></button>
+		<button class="cancel" type="button"></button>
+	</form>
+</div>
+	</div>
+</body></html>

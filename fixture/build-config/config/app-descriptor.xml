@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<app-descriptor>
+	<login>
+		<property name="realm" value="Fax2e-mail" />
+		<property name="page" value="index.htm" />
+	</login>
+	<observer period="600000" />
+
+	<managed-classes>
+		<app interface="js.core.App" class="ro.gnotis.fax2mail.Fax2MailApp" />
+		<public-service class="ro.gnotis.fax2mail.PublicService" />
+		<user-account-controller class="ro.gnotis.fax2mail.UserAccountController" />
+		<user-account-service class="ro.gnotis.fax2mail.UserAccountService" />
+
+		<task-manager class="ro.gnotis.fax2mail.TaskManager" />
+		<recaptcha class="ro.gnotis.fax2mail.Recaptcha" />
+		<properties class="ro.gnotis.fax2mail.Properties" />
+		<emails interface="js.email.EmailSender" type="SERVICE" />
+		<!-- ${fax2mail.connector.url} is defined into ${tomcat-base}/conf/properties.xml -->
+		<connector interface="ro.gnotis.fax2mail.connector.client.Connector" type="REMOTE" url="${fax2mail.connector.url}" />
+
+		<session-manager interface="js.transaction.hibernate.SessionManager" class="js.transaction.hibernate.SessionManagerImpl" />
+		<dao interface="ro.gnotis.fax2mail.dao.Dao" class="ro.gnotis.fax2mail.dao.DaoImpl" type="PROXY" />
+	</managed-classes>
+
+	<resource-methods class="ro.gnotis.fax2mail.PageFlow" />
+
+	<include file="app.xml" />
+</app-descriptor>

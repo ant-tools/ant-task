@@ -1,0 +1,32 @@
+.dialog {
+ position: relative;
+}
+
+.dialog .x-close {
+ position: absolute;
+ top: 4px;
+ right: 4px;
+ width: 20px;
+ height: 20px;
+ background-image: url(x-close.jpg);
+}
+
+.dialog .x-close:hover {
+ background-image: url(x-close-hover.jpg);
+}
+
+.dialog h2 {
+ 
+}
+
+.dialog fieldset {
+ 
+}
+
+.dialog .submit {
+ 
+}
+
+.dialog .cancel {
+ 
+}
