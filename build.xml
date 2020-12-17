@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project name="ant-task" default="all">
-	<include file="d://lib//tasks.xml" />
-	<property file="d://lib/libraries.properties" />
+	<property file="../lib/libraries.properties" />
 
-	<property name="NAME" value="js-ant-task" />
+	<property name="NAME" value="tools-ant-task" />
 	<property name="VERSION" value="1.0.1" />
 	<property name="BUILD" value="../build" />
 
@@ -18,7 +17,7 @@
 	<target name="all" depends="clean-all">
 		<antcall target="build-jar" />
 		<antcall target="generate-api-doc" />
-		<copy file="${JAR}" todir="D://lib/" />
+		<copy file="${JAR}" todir="${BUILD}" />
 	</target>
 
 	<target name="build-jar">
@@ -34,11 +33,12 @@
 
 			<classpath>
 				<pathelement path="${BIN}" />
+				<pathelement path="../build/tools-commons-1.0.0.jar" />
 				<pathelement path="../build/script-pack-1.0.0.jar" />
 				<pathelement path="../build/script-doc-1.0.0.jar" />
+				<pathelement path="../build/server-client.jar" />
 
 				<pathelement path="${LIB-JS-DOM-API}" />
-				<pathelement path="${LIB-SERVER-CLIENT}" />
 				<pathelement path="${LIB-ANT}" />
 				<pathelement path="${LIB-WOOD}" />
 			</classpath>

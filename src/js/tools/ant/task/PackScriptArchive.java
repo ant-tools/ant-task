@@ -13,7 +13,7 @@ import org.apache.tools.ant.Task;
 
 /**
  * Pack j(s)-lib Script code base into single file script archive considering classes dependencies.
- * <table border="1" style="border-collapse:collapse;">
+ * <table border="1" style="border-collapse:collapse;" summary="">
  * <tr>
  * <td>Attribute
  * <td>Description
@@ -47,8 +47,6 @@ import org.apache.tools.ant.Task;
  * <td>Print debug information about packing process. Default to false.
  * <td>No
  * </table>
- * 
- * <p>
  * 
  * <pre>
  *  &lt;target name="production-pack"&gt;

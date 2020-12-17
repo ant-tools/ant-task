@@ -20,7 +20,7 @@ import org.apache.tools.ant.Task;
  * js.admin.AppsManager class from j(s)-lib Manager. In order to access remote server one needs to know server host
  * name, the name of the web context where management application is deployed and whether connection is secure or not.
  * <code>Deploy</code> task supports four attributes, listed below.
- * <table border="1" style="border-collapse:collapse;">
+ * <table border="1" style="border-collapse:collapse;" summary="">
  * <tr>
  * <td>Attribute
  * <td>Description

@@ -17,7 +17,7 @@ import org.apache.tools.ant.Task;
  * href="http://api.js-lib.com/script-doc/index.html" target="_blank">Script Documentation Generator</a>; its purpose is
  * to integrate script API generation into project building process. Current implementation requires four attributes and
  * a single nested element, see parameters description below.
- * <table border="1" style="border-collapse:collapse;">
+ * <table border="1" style="border-collapse:collapse;" summary="">
  * <tr>
  * <td>Parameter
  * <td>Description
@@ -78,7 +78,7 @@ public class GenerateScriptDoc extends Task
   /**
    * Comma separated list of sources to exclude from documentation generation process.
    * 
-   * @param excludes
+   * @param excludes excluded sources
    */
   public void setExcludes(String excludes)
   {

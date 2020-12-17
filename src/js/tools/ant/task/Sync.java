@@ -6,8 +6,11 @@ import java.util.List;
 import java.util.SortedMap;
 import java.util.TreeMap;
 
+import org.apache.tools.ant.BuildException;
+import org.apache.tools.ant.Project;
+import org.apache.tools.ant.Task;
+
 import js.server.client.AppsManager;
-import js.server.model.ApiKeyException;
 import js.tools.ant.util.Utils;
 import js.tools.commons.rmi.FilesIterator;
 import js.tools.commons.rmi.FilesOutputStream;
@@ -15,10 +18,6 @@ import js.tools.commons.rmi.HttpRmi;
 import js.tools.commons.rmi.StreamHandler;
 import js.tools.commons.util.Files;
 import js.tools.commons.util.GType;
-
-import org.apache.tools.ant.BuildException;
-import org.apache.tools.ant.Project;
-import org.apache.tools.ant.Task;
 
 /**
  * Synchronize local source directory with a target directory from a remote repository. This task uses services provided
@@ -30,7 +29,7 @@ import org.apache.tools.ant.Task;
  * web document root associated with configured host, see <code>host</code> attribute. This is possible only if web
  * server configuration follows convention to name virtual hosts using the domain name. On a virtual host is possible to
  * deploy multiple context, see <code>context</code> attribute.
- * <table border="1" style="border-collapse:collapse;">
+ * <table border="1" style="border-collapse:collapse;" summary="">
  * <tr>
  * <td>Attribute
  * <td>Description
@@ -163,7 +162,7 @@ public class Sync extends Task
   /**
    * Set target directory.
    * 
-   * @param targetDir
+   * @param targetDir target directory.
    * @see #targetDir
    */
   public void setTarget(String targetDir)
@@ -218,7 +217,7 @@ public class Sync extends Task
   /**
    * Set remove stale files flag, potential harmful, see {@link #removeStaleFiles}.
    * 
-   * @param removeStaleFiles
+   * @param removeStaleFiles flag true to remove stale files.
    * @see #removeStaleFiles
    */
   public void setRemoveStaleFiles(boolean removeStaleFiles)
@@ -267,8 +266,6 @@ public class Sync extends Task
 
   /**
    * Initialize this task internal state and check attributes integrity.
-   * 
-   * @throw BuildException if at least one mandatory argument is missing or given value is not valid.
    */
   private void preprocessAttributes()
   {
@@ -303,7 +300,6 @@ public class Sync extends Task
    * 
    * @param webContextURL the URL of application manager class.
    * @throws IOException if HTTP-RMI request fails for some reason.
-   * @throws ApiKeyException
    */
   private void execute(String webContextURL) throws Exception
   {

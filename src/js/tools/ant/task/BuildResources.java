@@ -13,7 +13,7 @@ import org.apache.tools.ant.Task;
  * standard web pages; see <a href="http://api.js-lib.com/wood/index.html" target="_blank">WOOD API Specification</a>.
  * From this class perspective <em>static resources</em> are files created at build time and not changed for entire
  * application life time, that is, not generated per HTTP request. Current implementation supports next attributes:
- * <table border="1" style="border-collapse:collapse;">
+ * <table border="1" style="border-collapse:collapse;" summary="">
  * <tr>
  * <td>Attribute
  * <td>Description

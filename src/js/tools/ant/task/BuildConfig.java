@@ -32,7 +32,7 @@ import org.xml.sax.helpers.DefaultHandler;
 
 /**
  * Build application configuration.
- * <table border="1" style="border-collapse:collapse;">
+ * <table border="1" style="border-collapse:collapse;" summary="">
  * <tr>
  * <td>Attribute
  * <td>Description
